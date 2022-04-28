@@ -1,30 +1,38 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a href="https://vuejs.org" class="navbar-brand ms-1">
+        <img src="./assets/logo.png" height="40" />
+      </a>
+      <div class="navbar-nav me-auto">
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/admin"
+            >Admin</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/home"
+            >Home</router-link
+          >
+        </li>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/register"
+            >Sign Up</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/login"
+            >Sign In</router-link
+          >
+        </li>
+      </div>
+    </nav>
+    <div class="container">
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
