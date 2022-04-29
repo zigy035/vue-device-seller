@@ -12,7 +12,11 @@ window.$ = $;
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+
+import './global.css';
+
+library.add(faHome, faUserCircle);
 
 createApp(App)
   .use(store)
